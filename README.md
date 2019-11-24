@@ -6,6 +6,8 @@ Setup requirements:
 - .NET Core 3.0 SDK
 - Postman (optional, for manual tests)
 
+To start IdentityServer open solution and just hit Run button (Debug -> Start Debugging or F5).
+
 ---
 There are two preconfigures users bob/bob & alice/alice.
 Bob
