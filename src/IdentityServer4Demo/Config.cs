@@ -52,7 +52,7 @@ namespace IdentityServer4Demo
 
                 new ApiResource("rabbitmq")
                 {
-                    UserClaims = new [] { "names", "roles", "openid"},
+                    UserClaims = new [] { "names", "roles", "role", "openid"},
                     ApiSecrets = {
                         new Secret(ClientSecret.Sha256())
                     },

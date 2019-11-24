@@ -23,7 +23,8 @@ namespace IdentityServer4.Quickstart.UI
                     new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
                     new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
                     new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer4.IdentityServerConstants.ClaimValueTypes.Json),
-                    new Claim("roles", "RabbitManagement_Policymaker")}
+                    new Claim("role", "RabbitManagement_Policymaker")}
+
             },
             new TestUser { SubjectId = "11", Username = "bob", Password = "bob", 
                 Claims = 
@@ -36,8 +37,8 @@ namespace IdentityServer4.Quickstart.UI
                     new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
                     new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer4.IdentityServerConstants.ClaimValueTypes.Json),
                     new Claim("location", "somewhere"),
-                    new Claim("roles", "Admin"),
-                    new Claim("roles", "RabbitManagement_Administrator")
+                    new Claim("role", "Admin"),
+                    new Claim("role", "RabbitManagement_Administrator")
                 }
             }
         };
