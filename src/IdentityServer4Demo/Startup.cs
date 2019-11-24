@@ -34,7 +34,7 @@ namespace IdentityServer4Demo
             .AddInMemoryIdentityResources(Config.GetIdentityResources())
             .AddInMemoryClients(Config.GetClients())
             .AddTestUsers(TestUsers.Users)
-            .AddDeveloperSigningCredential(persistKey: false);
+            .AddDeveloperSigningCredential(persistKey: true);
 
             // preserve OIDC state in cache (solves problems with AAD and URL lenghts)
             services.AddOidcStateDataFormatterCache("aad");
