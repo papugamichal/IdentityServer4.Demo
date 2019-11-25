@@ -32,10 +32,16 @@ namespace IdentityServer4Demo
                     Name = "roles",
                     UserClaims = {"role"},
                     DisplayName = "Access to user roles"
+                },
+                new IdentityResource
+                {
+                    Name = "rabbit_resources",
+                    UserClaims = {"rabbit_resources"},
+                    DisplayName = "Access to user roles"
                 }
             };
         }
-
+        
         public static IEnumerable<ApiResource> GetApis()
         {
             return new List<ApiResource>
@@ -52,7 +58,7 @@ namespace IdentityServer4Demo
 
                 new ApiResource("rabbitmq")
                 {
-                    UserClaims = new [] { "names", "roles", "role", "openid"},
+                    UserClaims = new [] { "names", "roles", "role", "openid", "rabbit_resources"},
                     ApiSecrets = {
                         new Secret(ClientSecret.Sha256())
                     },

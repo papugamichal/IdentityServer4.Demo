@@ -29,6 +29,7 @@ namespace IdentityServer4Demo
                 options.Events.RaiseFailureEvents = true;
                 options.Events.RaiseInformationEvents = true;
                 options.Events.RaiseSuccessEvents = true;
+                options.EmitLegacyResourceAudienceClaim = true;
             })
             .AddInMemoryApiResources(Config.GetApis())
             .AddInMemoryIdentityResources(Config.GetIdentityResources())

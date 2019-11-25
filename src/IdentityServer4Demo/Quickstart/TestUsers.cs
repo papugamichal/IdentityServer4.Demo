@@ -38,7 +38,8 @@ namespace IdentityServer4.Quickstart.UI
                     new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer4.IdentityServerConstants.ClaimValueTypes.Json),
                     new Claim("location", "somewhere"),
                     new Claim("role", "Admin"),
-                    new Claim("role", "RabbitManagement_Administrator")
+                    new Claim("role", "RabbitManagement_Administrator"),
+                    new Claim("rabbit_resources", @"{ 'rabbitmq': ['read:*/*', 'write:*/*', 'tag:monitoring'], 'rabbitmq_2': ['tag:monitoring']}", IdentityServer4.IdentityServerConstants.ClaimValueTypes.Json),
                 }
             }
         };
