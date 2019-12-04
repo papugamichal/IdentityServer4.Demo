@@ -85,6 +85,8 @@ namespace IdentityServer4Demo
                     ClientName = "Implicit Client",
                     ClientSecrets = new [] { new Secret(ClientSecret.Sha256()) },
                     AccessTokenType = AccessTokenType.Jwt,
+                    AccessTokenLifetime = 31556926,
+                    IdentityTokenLifetime = 31556926,
                     AllowedGrantTypes = GrantTypes.ImplicitAndClientCredentials,
                     AllowAccessTokensViaBrowser = true,
                     AlwaysSendClientClaims = true,
@@ -93,7 +95,7 @@ namespace IdentityServer4Demo
                     RequireConsent = true,
                     RefreshTokenUsage = TokenUsage.OneTimeOnly,
                     RefreshTokenExpiration = TokenExpiration.Absolute,
-                    AbsoluteRefreshTokenLifetime = 900,
+                    AbsoluteRefreshTokenLifetime = 31556926,
                     RedirectUris =
                         GetRedirectUris("localhost", 15672),
                     PostLogoutRedirectUris =
@@ -118,8 +120,8 @@ namespace IdentityServer4Demo
                     ClientName = $"RabbitMq.Maintanance",
                     ClientSecrets = new [] { new Secret(ClientSecret.Sha256()) },
                     AccessTokenType = AccessTokenType.Jwt,
-                    AccessTokenLifetime = 3600,
-                    IdentityTokenLifetime = 3600,
+                    AccessTokenLifetime = 31556926,
+                    IdentityTokenLifetime = 31556926,
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     AllowAccessTokensViaBrowser = true,
                     AlwaysSendClientClaims = true,
@@ -128,7 +130,7 @@ namespace IdentityServer4Demo
                     RequireConsent = true,
                     RefreshTokenUsage = TokenUsage.OneTimeOnly,
                     RefreshTokenExpiration = TokenExpiration.Absolute,
-                    AbsoluteRefreshTokenLifetime = 3600,
+                    AbsoluteRefreshTokenLifetime = 31556926,
                     AllowedScopes = new List<string>
                     {
                         IdentityServerConstants.StandardScopes.OpenId,

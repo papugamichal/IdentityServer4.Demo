@@ -6,7 +6,7 @@ using System.Linq;
 namespace IdentityServer4Demo.Api
 {
     [Route("/api/test")]
-    [Authorize(AuthenticationSchemes = IdentityServerConstants.LocalApi.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = IdentityServerConstants.LocalApi.AuthenticationScheme)]
     public class TestController : ControllerBase
     {
         public IActionResult Get()
